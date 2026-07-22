@@ -1,5 +1,7 @@
 # Import python packages
 import streamlit as st
+import requests  
+
 from snowflake.snowpark.functions import col
 
 
@@ -43,6 +45,5 @@ if ingredients_list:
         session.sql(my_insert_stmt).collect()
         st.success('Your Smoothie is ordered!', icon="✅")
 #New section to display Smoothie fruit nutrition information
-import requests  
 
 #st.text(smoothiefroot_response)
